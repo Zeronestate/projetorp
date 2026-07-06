@@ -3,35 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto RP - Sistema</title>
+    <title>Manual - Prefeitura de Chico</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">SISTEMA C.Y.B.E.R</div>
+    <header class="glass-panel">
+        <div class="logo-container">
+            <div class="pulse-ring"></div>
+            <div class="header-brand">MANUAL DA PREFEITURA DE CHICO</div>
+        </div>
+        <div class="status-bar">
+            <span class="status-dot"></span> SISTEMA ONLINE
+        </div>
     </header>
 
     <div class="wrapper">
-        <aside class="sidebar">
+        <aside class="sidebar glass-panel">
             <nav>
+                <div class="menu-label">NAVEGAÇÃO OFICIAL</div>
                 <ul>
-                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html" class="active">Painel Central</a></li>
                     <li><a href="guia.html">Guia de Procedimentos</a></li>
-                    <li><a href="postagens.html">Últimas Notícias</a></li>
+                    <li><a href="postagens.html">Comunicados</a></li>
                 </ul>
             </nav>
         </aside>
 
-        <main class="conteudo">
-            <h1>Bem-vindo ao Sistema</h1>
-            <p>Conexão estabelecida. Selecione uma opção no menu lateral para continuar.</p>
+        <main class="conteudo glass-panel">
+            <div class="card">
+                <h1>BEM-VINDO, GESTOR</h1>
+                <p>Acesso autorizado aos registros e protocolos da Prefeitura de Chico.</p>
+                <div class="data-box">
+                    <p><strong>Nível de Acesso:</strong> Administrativo Máximo</p>
+                    <p><strong>Criptografia:</strong> Ativa (AES-256)</p>
+                </div>
+            </div>
         </main>
     </div>
-
-    <footer>
-        <p>© 2026 - Terminal de Dados Organizado</p>
-    </footer>
-    <script src="script.js"></script>
 </body>
 </html>
-
