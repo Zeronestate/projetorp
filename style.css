@@ -95,6 +95,7 @@ header {
     width: 250px;
     padding: 25px;
     border-radius: 12px;
+    box-sizing: border-box;
 }
 
 .menu-label {
@@ -133,6 +134,8 @@ header {
     border-radius: 12px;
     position: relative;
     overflow: hidden;
+    box-sizing: border-box;
+    word-wrap: break-word; /* Evita que o texto saia da caixa */
 }
 
 .conteudo::before {
@@ -151,6 +154,7 @@ h1 {
 p {
     font-size: 1.2rem;
     color: #94a3b8;
+    line-height: 1.5;
 }
 
 .data-box {
@@ -162,3 +166,64 @@ p {
 }
 
 .data-box p { color: #f1f5f9; margin: 5px 0; }
+
+/* =========================================================================
+   REGRAS DE RESPONSIVIDADE (ADAPTAÇÃO PARA ECRÃS DE TELEMÓVEIS E TABLETS)
+   ========================================================================= */
+@media (max-width: 850px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 20px 15px;
+        margin: 10px;
+    }
+
+    .logo-container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .header-brand {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .wrapper {
+        flex-direction: column; /* Empilha a barra lateral e o conteúdo */
+        padding: 0 10px 10px 10px;
+    }
+
+    .sidebar {
+        width: 100%; /* A barra lateral ocupa a largura total do ecrã */
+        padding: 15px;
+    }
+
+    .sidebar a {
+        text-align: center; /* Centraliza os botões no telemóvel */
+        transform: none; /* Remove o efeito de deslizar para a direita no telemóvel para não quebrar o layout */
+    }
+    
+    .sidebar a:hover, .sidebar a.active {
+        transform: none;
+    }
+
+    .conteudo {
+        width: 100%;
+        padding: 25px 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    p {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    
+    .data-box {
+        text-align: left;
+    }
+}
